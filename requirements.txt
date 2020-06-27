@@ -14,4 +14,3 @@ scikit-learn==0.22.1
 scipy==1.4.1
 seaborn==0.10.0
 tensorflow==2.0
-OpenCV==4.2.0
