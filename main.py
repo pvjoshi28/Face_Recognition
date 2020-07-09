@@ -211,7 +211,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    #port = int(os.environ.get('PORT', 5000)
-    #app.listen(process.env.PORT || 5000, threaded=True, debug=True)
-    app.run(host = '0.0.0.0', port = 5000) #, threaded=True, debug=True)
-    #app.run()
+    #app.run(host = '0.0.0.0', port = 5000)
+    app.run(threaded=True, debug=True)
