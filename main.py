@@ -46,7 +46,7 @@ def home():
     
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['GET','POST'])
 def predict():
     '''
     For rendering results on HTML GUI
