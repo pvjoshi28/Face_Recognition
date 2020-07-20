@@ -213,4 +213,4 @@ def predict():
 if __name__ == "__main__":
     
     #app.run(threaded=True, debug=True)
-    app.listen(process.env.PORT, threaded=True, debug=True)
+    app.listen(process.env.PORT||5000, threaded=True, debug=True)
