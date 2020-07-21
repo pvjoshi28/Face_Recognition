@@ -18,7 +18,7 @@ import h5py
 
 from tensorflow.keras.models import Model
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 from keras.utils import to_categorical
 from sklearn.preprocessing import LabelEncoder
