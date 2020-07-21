@@ -46,7 +46,7 @@ def home():
     
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST']) # removed 'GET'
+@app.route('/predict',methods=['GET','POST']) # removed 'GET'
 def predict():
     '''
     For rendering results on HTML GUI
@@ -112,7 +112,7 @@ def predict():
 
         return img[...,::-1]
 
-    x = metadata.size   # I have used first 500 images as loading of around 10000 images keeps crashing my system.
+    x = metadata.size  
 
     data = metadata[0:x]
     
@@ -177,7 +177,7 @@ def predict():
     
     
     
-    file_path1 = request.files['fileupload1']
+    file_path1 = requests.get('fileupload1')
     image_new1 = cv2.imread(file_path1,1) # removed "'Images_all/' + " from file path
     
     
