@@ -46,7 +46,7 @@ def home():
     
     return render_template('index.html')
 
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['POST']) # removed 'GET'
 def predict():
     '''
     For rendering results on HTML GUI
@@ -177,8 +177,8 @@ def predict():
     
     
     
-    file_path1 = request.form.get('fileupload1')
-    image_new1 = cv2.imread('Images_all/' + file_path1,1)
+    file_path1 = request.files['fileupload1']
+    image_new1 = cv2.imread(file_path1,1) # removed "'Images_all/' + " from file path
     
     
     norm_img = np.zeros((224,224))
@@ -212,5 +212,5 @@ def predict():
 
 if __name__ == "__main__":
     
-    #app.run(threaded=True, debug=True)
-    app.listen(process.env.PORT||5000, threaded=True, debug=True)
+    app.run(threaded=True, debug=True)
+    #app.listen(process.env.PORT||5000, threaded=True, debug=True)
