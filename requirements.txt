@@ -1,5 +1,5 @@
-﻿gunicorn>=19.0.0
-Flask==1.1.1
+gunicorn>=19.0.0
+Flask==2.3.2
 h5py==2.10.0
 imbalanced-learn==0.6.2
 imblearn==0.0
